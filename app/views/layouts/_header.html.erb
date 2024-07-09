@@ -1,0 +1,19 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+        <%= link_to t("navbar.app_name"), "#", id: "logo" %>
+        <nav>
+            <ul class="nav navbar-nav navbar-right">
+                <li><%= link_to t("navbar.home"), root_path %></li>
+                <li><%= link_to t("navbar.help"), help_path %></li>
+                <li><%= link_to t("navbar.login"), "#"%></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="locale-switcher">
+  <ul class="nav navbar-nav navbar-right">
+    <li><%= link_to t("languages.en") , request.params.merge(locale: :en) %></li>
+    <li><%= link_to t("languages.vi"), request.params.merge(locale: :vi) %></li>
+  </ul>
+</div>

@@ -1,0 +1,9 @@
+<div id="<%= dom_id product %>">
+  <p>
+      <strong><%= t("products.attributes.name") %>:</strong>
+    <%= product.name %>
+  </p>
+  <p>
+    <%= link_to t("products.show_product"), product_path(product) %>
+  </p>
+</div>
