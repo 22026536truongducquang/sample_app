@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   private
 
   def set_locale
+<<<<<<< HEAD
     allowed = I18n.available_locales.map(&:to_s)
 
     I18n.locale =
@@ -12,6 +13,9 @@ class ApplicationController < ActionController::Base
       else
         I18n.default_locale
       end
+=======
+    I18n.locale = params[:locale] || I18n.default_locale
+>>>>>>> 3d7a312 (Update pull_request_template.md)
   end
 
   def default_url_options

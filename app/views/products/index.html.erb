@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <% if notice.present? %>
   <p class="notice-message"><%= notice %></p>
 <% end %>
@@ -28,3 +29,16 @@
 <br>
 
 <%= link_to t(".new"), new_product_path %>
+=======
+<% if notice %>
+  <p class="notice"><%= notice %></p>
+<% end %>
+
+<h1><%= t("products.index.title") %></h1>
+
+<div id="products">
+  <%= render partial: "product", collection: @products %>
+</div>
+
+<%= link_to t("products.new_product"), new_product_path %>
+>>>>>>> 3d7a312 (Update pull_request_template.md)
