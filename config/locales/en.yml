@@ -1,7 +1,10 @@
 en:
+<<<<<<< HEAD
   languages:
     en: "English"
     vi: "Vietnamese"
+=======
+>>>>>>> 28f4749 (chapter_3_4_5)
   errors:
     template:
       header:
@@ -19,17 +22,24 @@ en:
     login: "Log in"
 
   products:
+<<<<<<< HEAD
     index:
       title: "Products"
     attributes:
       name: "Name"
+=======
+    back_to_products: "Back to products"
+>>>>>>> 28f4749 (chapter_3_4_5)
     create:
       success: "Product was successfully created."
     destroy:
       success: "Product was successfully deleted."
+<<<<<<< HEAD
     new_product: "New product"
     editing_product: "Editing product"
     back_to_products: "Back to products"
+=======
+>>>>>>> 28f4749 (chapter_3_4_5)
     destroy_product: "Destroy this product"
     edit_product: "Edit this product"
     new_product: "New product"
@@ -61,9 +71,68 @@ en:
       link: "Ruby on Rails Tutorial"
       link_url: "http://www.railstutorial.org/"
       title: "Home"
+<<<<<<< HEAD
   
   zones:
     new_zone: "New zone"
     edit_zone: "Editing zone"
     zone_label: "Zone"
     date_label: "Date"
+=======
+      
+vi:
+  errors:
+    template:
+      header:
+        one: "1 lỗi khiến %{model} không thể được lưu"
+        other: "%{count} lỗi khiến %{model} không thể được lưu"
+
+  layouts:
+    application:
+      base_title: "Ứng dụng mẫu Ruby on Rails Tutorial"
+
+  navbar:
+    app_name: "Ứng dụng mẫu"
+    home: "Trang chủ"
+    help: "Trợ giúp"
+    login: "Đăng nhập"
+
+  products:
+    back_to_products: "Quay lại danh sách sản phẩm"
+    create:
+      success: "Tạo sản phẩm thành công."
+    destroy:
+      success: "Xóa sản phẩm thành công."
+    destroy_product: "Xóa sản phẩm này"
+    edit_product: "Chỉnh sửa sản phẩm này"
+    new_product: "Thêm sản phẩm mới"
+    not_found: "Không tìm thấy sản phẩm."
+    show_product: "Xem sản phẩm này"
+    update:
+      success: "Cập nhật sản phẩm thành công."
+
+  static_pages:
+    help:
+      description_html: >
+        Nhận trợ giúp về Ruby on Rails Tutorial tại
+        %{link1}.
+        Để nhận trợ giúp về ứng dụng mẫu này, xem
+        %{link2}
+        cuốn sách.
+      heading: "Trợ giúp"
+      link1: "Trang trợ giúp Ruby on Rails Tutorial"
+      link1_url: "http://www.railstutorial.org/help"
+      link2: "Ruby on Rails Tutorial"
+      link2_url: "http://www.railstutorial.org/book"
+      title: "Trợ giúp"
+
+    home:
+      description_html: >
+        Đây là trang chủ của
+        %{link}
+        ứng dụng mẫu.
+      heading: "Ứng dụng mẫu"
+      link: "Ruby on Rails Tutorial"
+      link_url: "http://www.railstutorial.org/"
+      title: "Trang chủ"
+>>>>>>> 28f4749 (chapter_3_4_5)

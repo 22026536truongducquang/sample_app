@@ -2,7 +2,11 @@
   <% if product.errors.any? %>
     <div style="color: red">
       <h2>
+<<<<<<< HEAD
         <%= t("errors.template.header", count: product.errors.count, model: product.class.model_name.human) %>
+=======
+        <%= t('errors.template.header', count: product.errors.count, model: product.class.model_name.human) %>
+>>>>>>> 28f4749 (chapter_3_4_5)
       </h2>
       <ul>
         <% product.errors.each do |error| %>
