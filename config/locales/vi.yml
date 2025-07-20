@@ -2,7 +2,34 @@ vi:
   languages:
     en: "Tiếng Anh"
     vi: "Tiếng Việt"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "không được để trống"
+              too_short: "quá ngắn (tối thiểu %{count} ký tự)"
+            email:
+              blank: "không được để trống"
+              invalid: "không hợp lệ"
+              taken: "đã được sử dụng"
+            password:
+              blank: "không được để trống"
+              too_short: "quá ngắn (tối thiểu %{count} ký tự)"
+            password_confirmation:
+              blank: "không được để trống"
+              confirmation: "không khớp với Mật khẩu"
+            date_of_birth:
+              blank: "không được để trống"
+              invalid: "không phải là ngày hợp lệ"
+              in_future: "không được trong tương lai"
+              past_100: "không được trong quá khứ (tối đa 100 năm trước)"
   errors:
+    template:
+      header:
+        one: "Có 1 lỗi khiến %{model} không thể được lưu"
+        other: "Có %{count} lỗi khiến %{model} không thể được lưu"
     template:
       header:
         one: "1 lỗi khiến %{model} không thể được lưu"
