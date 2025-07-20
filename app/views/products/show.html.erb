@@ -1,12 +1,14 @@
-<% if notice %>
-  <p class="notice"><%= notice %></p>
+<% if notice.present? %>
+  <p class="notice-message"><%= notice %></p>
 <% end %>
 
 <%= render @product %>
 
 <div>
-  <%= link_to t("products.edit_product"), edit_product_path(@product) %> |
-  <%= link_to t("products.back_to_products"), products_path %>
+  <%= link_to t(".edit"), edit_product_path(@product) %> |
+  <%= link_to t(".back"), products_path %>
 
-  <%= button_to t("products.destroy_product"), @product, method: :delete %>
+  <%= button_to t(".destroy"), @product,
+                method: :delete,
+                data: { confirm: t(".confirm_destroy") } %>
 </div>

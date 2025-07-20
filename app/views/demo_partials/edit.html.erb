@@ -1,2 +1,5 @@
-<h1><%= t("zones.edit_zone") %></h1>
-<%= render partial: "form", locals: {zone: @zone, date: @date} %>
+<p><%= t(".zone", zone: @zone) %></p>
+<p><%= t(".date", date: @date) %></p>
+
+<h1><%= t(".title") %></h1>
+<%= render partial: "form", locals: { zone: @zone, date: @date } %>

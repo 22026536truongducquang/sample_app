@@ -1,2 +1,5 @@
-<p><%= t("zones.zone_label") %>: <%= zone %></p>
-<p><%= t("zones.date_label") %>: <%= date %></p>
+<%= label_tag :zone, t("demo_partials.form.zone_label") %>
+<%= text_field_tag :zone, zone %>
+
+<%= label_tag :date, t("demo_partials.form.date_label") %>
+<%= date_field_tag :date, date %>

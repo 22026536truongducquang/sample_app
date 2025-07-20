@@ -1,7 +1,7 @@
-<% provide :title, t("static_pages.home.title") %>
-<h1><%= t("static_pages.home.heading") %></h1>
+<% provide :title, t(".title") %>
+<h1><%= t(".heading") %></h1>
 <p>
-  <%= t("static_pages.home.description_html",
-    link: link_to(t("static_pages.home.link"), t("static_pages.home.link_url"))
+  <%= t(".description_html",
+    link: link_to(t(".link"), t(".link_url"))
   ).html_safe %>
 </p>
