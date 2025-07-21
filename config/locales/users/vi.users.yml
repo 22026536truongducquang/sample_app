@@ -1,0 +1,58 @@
+vi:
+  activerecord:
+    models:
+      user: "Người dùng"
+    attributes:
+      user:
+        name: "Họ và Tên"
+        email: "Email"
+        password: "Mật khẩu"
+        password_confirmation: "Xác nhận mật khẩu"
+        created_at: "Tạo lúc"
+        updated_at: "Cập nhật lúc"
+        date_of_birth: "Ngày sinh"
+        gender: "Giới tính"
+        genders:
+          male: "Nam"
+          female: "Nữ"
+          other: "Khác"
+
+  helpers:
+    submit:
+      user:
+        create: "Tạo tài khoản"
+
+  views:
+    users:
+      new:
+        title: "Đăng kí"
+      show:
+        title: "Hồ sơ người dùng"
+  
+  errors:
+    template:
+      header:
+        one: "1 lỗi đã ngăn %{model} được lưu"
+        other: "%{count} lỗi đã ngăn %{model} được lưu"
+        
+    models:
+      user:
+        attributes:
+          name: 
+            blank: "không được để trống"
+            too_short: "quá ngắn (tối thiểu %{count} ký tự)"
+          email:
+            blank: "không được để trống"
+            invalid: "không hợp lệ"
+            taken: "đã được sử dụng"
+          password:
+            blank: "không được để trống"
+            too_short: "quá ngắn (tối thiểu %{count} ký tự)"
+          password_confirmation:
+            blank: "không được để trống"
+            confirmation: "không khớp với Mật khẩu"
+          date_of_birth:
+            blank: "không được để trống"
+            invalid: "không phải là ngày hợp lệ"
+            in_future: "không được trong tương lai"
+            past_100: "không được trong quá khứ (tối đa 100 năm trước)"

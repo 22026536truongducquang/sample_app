@@ -10,5 +10,6 @@ Rails.application.routes.draw do
     get "demo_partials/edit"
 
     resources :products
+    resources :users
   end
 end

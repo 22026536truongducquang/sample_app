@@ -1,0 +1,19 @@
+en:
+  products:
+    index:
+      title: "Products"
+    attributes:
+      name: "Name"
+    create:
+      success: "Product was successfully created."
+    destroy:
+      success: "Product was successfully deleted."
+    new_product: "New product"
+    editing_product: "Editing product"
+    back_to_products: "Back to products"
+    destroy_product: "Destroy this product"
+    edit_product: "Edit this product"
+    not_found: "Product not found."
+    show_product: "Show this product"
+    update:
+      success: "Product was successfully updated."

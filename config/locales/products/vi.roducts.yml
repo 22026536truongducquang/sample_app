@@ -1,0 +1,19 @@
+vi:
+  products:
+    index:
+      title: "Sản phẩm"
+    attributes:
+      name: "Tên"
+    create:
+      success: "Tạo sản phẩm thành công."
+    destroy:
+      success: "Xóa sản phẩm thành công."
+    new_product: "Thêm sản phẩm mới"
+    editing_product: "Chỉnh sửa sản phẩm"
+    back_to_products: "Quay lại danh sách sản phẩm"
+    destroy_product: "Xóa sản phẩm này"
+    edit_product: "Chỉnh sửa sản phẩm này"
+    not_found: "Không tìm thấy sản phẩm."
+    show_product: "Xem sản phẩm này"
+    update:
+      success: "Cập nhật sản phẩm thành công."

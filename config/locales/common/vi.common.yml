@@ -1,0 +1,45 @@
+vi:
+  languages:
+    en: "Tiếng Anh"
+    vi: "Tiếng Việt"
+  layouts:
+    application:
+      base_title: "Ứng dụng mẫu Ruby on Rails Tutorial"
+  navbar:
+    app_name: "Ứng dụng mẫu"
+    home: "Trang chủ"
+    help: "Trợ giúp"
+    login: "Đăng nhập"
+  errors:
+    template:
+      header:
+        one: "1 lỗi khiến %{model} không thể được lưu"
+        other: "%{count} lỗi khiến %{model} không thể được lưu"
+  static_pages:
+    help:
+      description_html: >
+        Nhận trợ giúp về Ruby on Rails Tutorial tại
+        %{link1}.
+        Để nhận trợ giúp về ứng dụng mẫu này, xem
+        %{link2}
+        cuốn sách.
+      heading: "Trợ giúp"
+      link1: "Trang trợ giúp Ruby on Rails Tutorial"
+      link1_url: "http://www.railstutorial.org/help"
+      link2: "Ruby on Rails Tutorial"
+      link2_url: "http://www.railstutorial.org/book"
+      title: "Trợ giúp"
+    home:
+      description_html: >
+        Đây là trang chủ của
+        %{link}
+        ứng dụng mẫu.
+      heading: "Ứng dụng mẫu"
+      link: "Ruby on Rails Tutorial"
+      link_url: "http://www.railstutorial.org/"
+      title: "Trang chủ"
+  zones:
+    new_zone: "Khu vực mới"
+    edit_zone: "Chỉnh sửa khu vực"
+    zone_label: "Khu vực"
+    date_label: "Ngày"
