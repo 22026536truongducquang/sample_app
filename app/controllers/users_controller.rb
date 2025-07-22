@@ -13,10 +13,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def edit; end
-
-  def update; end
-
   def show
     @user = User.find_by id: params[:id]
     return if @user
@@ -24,10 +20,6 @@ class UsersController < ApplicationController
     flash[:warning] = "Not found user!"
     redirect_to root_path
   end
-
-  def index; end
-
-  def destroy; end
 
   private
   def user_params

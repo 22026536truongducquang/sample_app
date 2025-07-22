@@ -5,13 +5,17 @@ vi:
       product: "Sản phẩm"
     attributes:
       product:
-        name: "Tên"
+        name: "Tên sản phẩm"
       user:
-        name: "Tên"
+        name: "Họ tên"
         email: "Email"
         password: "Mật khẩu"
         password_confirmation: "Xác nhận mật khẩu"
         date_of_birth: "Ngày sinh"
+        gender:
+          male: "Nam"
+          female: "Nữ"
+          other: "Khác"
 
     errors:
       models:
@@ -29,9 +33,9 @@ vi:
               too_short: "quá ngắn (tối thiểu %{count} ký tự)"
             password_confirmation:
               blank: "không được để trống"
-              confirmation: "không khớp với Mật khẩu"
+              confirmation: "không khớp với mật khẩu"
             date_of_birth:
               blank: "không được để trống"
               invalid: "không phải là ngày hợp lệ"
-              in_future: "không được trong tương lai"
-              past_max_year: "không được trong quá khứ (tối đa 100 năm trước)"
+              in_future: "không được ở tương lai"
+              past_max_year: "không được cách hiện tại quá 100 năm"

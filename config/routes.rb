@@ -9,6 +9,9 @@ Rails.application.routes.draw do
     get "demo_partials/new"
     get "demo_partials/edit"
 
+    get "signup",   to: "users#new",            as: :signup
+    post "signup",  to: "users#create"        
+
     resources :products
     resources :users
   end

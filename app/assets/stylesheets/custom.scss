@@ -27,7 +27,6 @@ textarea {
   color: green;
 }
 
-<<<<<<< HEAD
 .notice-message {
   color: #155724;
   background-color: #d4edda;
@@ -62,8 +61,6 @@ textarea {
 }
 
 
-=======
->>>>>>> 3d7a312 (Update pull_request_template.md)
 // ===== Header / Logo =====
 #logo {
   float: left;
@@ -83,11 +80,7 @@ textarea {
 
 // ===== Locale Switcher =====
 .locale-switcher {
-<<<<<<< HEAD
   margin: 0 20px 0 0;
-=======
-  margin: 20px 0;
->>>>>>> 3d7a312 (Update pull_request_template.md)
   text-align: right;
 
   ul {
@@ -106,36 +99,7 @@ textarea {
   }
 }
 
-aside {
-  section.user_info {
-    margin-top: 20px;
-  }
-
-  section {
-    padding: 10px 0;
-    margin-top: 20px;
-
-    &:first-child {
-      border: 0;
-      padding-top: 0;
-    }
-
-    span {
-      display: block;
-      margin-bottom: 3px;
-      line-height: 1;
-    }
-
-    h1 {
-      font-size: 1.4em;
-      text-align: left;
-      letter-spacing: -1px;
-      margin-bottom: 3px;
-      margin-top: 0px;
-    }
-  }
-}
-
+/* avatar */
 .gravatar {
   float: left;
   margin-right: 10px;
@@ -146,7 +110,10 @@ aside {
 }
 
 /* forms */
-input, textarea, select, .uneditable-input {
+input,
+textarea,
+select,
+.uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;

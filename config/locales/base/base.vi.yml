@@ -17,6 +17,7 @@ vi:
     app_name: "Ứng dụng mẫu"
     home: "Trang chủ"
     help: "Trợ giúp"
+    sign_up: "Dăng kí"
     login: "Đăng nhập"
 
   static_pages:
@@ -90,3 +91,11 @@ vi:
       zone_label: "Khu vực"
       date_label: "Ngày"
 
+  users:
+      new:
+        title: "Đăng ký tài khoản"
+        select_gender: "Chọn giới tính"
+        create_account: "Tạo tài khoản"
+      show:
+        created_at: "Ngày tạo"
+        updated_at: "Cập nhật lần cuối"

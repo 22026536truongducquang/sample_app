@@ -17,6 +17,7 @@ en:
     app_name: "Sample App"
     home: "Home"
     help: "Help"
+    sign_up: "Sign up"
     login: "Log in"
 
   static_pages:
@@ -89,3 +90,13 @@ en:
     form:
       zone_label: "Zone"
       date_label: "Date"
+
+  users:
+      new:
+        title: "Đăng ký tài khoản"
+        select_gender: "Chọn giới tính"
+        create_account: "Tạo tài khoản"
+      show:
+        title: "Thông tin người dùng"
+        created_at: "Ngày tạo"
+        updated_at: "Cập nhật lần cuối"
