@@ -1,8 +1,8 @@
-<% provide :title, t("static_pages.help.title") %>
-<h1><%= t("static_pages.help.heading") %></h1>
+<% provide :title, t(".title") %>
+<h1><%= t(".heading") %></h1>
 <p>
-  <%= t("static_pages.help.description_html",
-    link1: link_to(t("static_pages.help.link1"), t("static_pages.help.link1_url")),
-    link2: link_to(content_tag(:em, t("static_pages.help.link2")), t("static_pages.help.link2_url"))
+  <%= t(".description_html",
+    link1: link_to(t(".link1"), t(".link1_url")),
+    link2: link_to(content_tag(:em, t(".link2")), t(".link2_url"))
   ).html_safe %>
 </p>

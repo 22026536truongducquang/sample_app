@@ -1,17 +1,30 @@
-<<<<<<< HEAD
-<% if notice %>
-  <p class="notice"><%= notice %></p>
+<% if notice.present? %>
+  <p class="notice-message"><%= notice %></p>
 <% end %>
 
-<h1><%= t("products.index.title") %></h1>
-=======
-<p style="color: green"><%= notice %></p>
+<% content_for :title, t("products.index.title") %>
 
-<h1>Products</h1>
->>>>>>> 28f4749 (chapter_3_4_5)
+<h1><%= t(".title") %></h1>
 
-<div id="products">
-  <%= render partial: "product", collection: @products %>
-</div>
+<table>
+  <thead>
+    <tr>
+      <th><%= t(".name") %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
-<%= link_to t("products.new_product"), new_product_path %>
+  <tbody>
+    <% if @products.present? %>
+      <%= render @products %>
+    <% else %>
+      <tr>
+        <td colspan="4"><%= t(".empty") %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t(".new"), new_product_path %>
