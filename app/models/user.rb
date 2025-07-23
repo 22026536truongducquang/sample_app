@@ -5,6 +5,8 @@ class User < ApplicationRecord
   # - Trường password_digest để lưu hash # rubocop:disable Style/AsciiComments
   # - Phương thức authenticate(password) để xác thực # rubocop:disable Style/AsciiComments
 
+  enum gender: {male: 0, female: 1, other: 2}
+
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   NAME_MAX_LENGTH = 50
   EMAIL_MAX_LENGTH = 255
@@ -21,8 +23,6 @@ class User < ApplicationRecord
             format: {with: VALID_EMAIL_REGEX},
             uniqueness: {case_sensitive: false}
   validate :date_of_birth_must_be_within_last_100_years
-
-  enum gender: {male: 0, female: 1, other: 2}
 
   private
 
