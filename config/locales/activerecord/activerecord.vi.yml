@@ -1,0 +1,37 @@
+vi:
+  activerecord:
+    models:
+      user: "Người dùng"
+      product: "Sản phẩm"
+    attributes:
+      product:
+        name: "Tên"
+      user:
+        name: "Tên"
+        email: "Email"
+        password: "Mật khẩu"
+        password_confirmation: "Xác nhận mật khẩu"
+        date_of_birth: "Ngày sinh"
+
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "không được để trống"
+              too_short: "quá ngắn (tối thiểu %{count} ký tự)"
+            email:
+              blank: "không được để trống"
+              invalid: "không hợp lệ"
+              taken: "đã được sử dụng"
+            password:
+              blank: "không được để trống"
+              too_short: "quá ngắn (tối thiểu %{count} ký tự)"
+            password_confirmation:
+              blank: "không được để trống"
+              confirmation: "không khớp với Mật khẩu"
+            date_of_birth:
+              blank: "không được để trống"
+              invalid: "không phải là ngày hợp lệ"
+              in_future: "không được trong tương lai"
+              past_max_year: "không được trong quá khứ (tối đa 100 năm trước)"

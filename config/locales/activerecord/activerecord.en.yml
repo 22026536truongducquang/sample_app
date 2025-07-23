@@ -1,0 +1,37 @@
+en:
+  activerecord:
+    models:
+      user: "User"
+      product: "Product"
+    attributes:
+      product:
+        name: "Name"
+      user:
+        name: "Name"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+        date_of_birth: "Date of Birth"
+
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "can't be blank"
+              too_short: "is too short (minimum is %{count} characters)"
+            email:
+              blank: "can't be blank"
+              invalid: "is invalid"
+              taken: "has already been taken"
+            password:
+              blank: "can't be blank"
+              too_short: "is too short (minimum is %{count} characters)"
+            password_confirmation:
+              blank: "can't be blank"
+              confirmation: "doesn't match Password"
+            date_of_birth:
+              blank: "can't be blank"
+              invalid: "is not a valid date"
+              in_future: "can't be in the future"
+              past_max_year: "can't be more than 100 years ago"
