@@ -1,32 +1,32 @@
-<% provide :title, t("views.users.new.title") %>
+<% provide :title, t(".title") %>
 
-<h1><%= t("views.users.new.title") %></h1>
+<h1><%= t(".title") %></h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_with(model: @user, local: true) do |f| %>
       <%= render "shared/error_messages" %>
 
-      <%= f.label :name, t("activerecord.attributes.user.name") %>
-      <%= f.text_field :name %>
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "form-control" %>
 
-      <%= f.label :email, t("activerecord.attributes.user.email") %>
-      <%= f.email_field :email %>
+      <%= f.label :email %>
+      <%= f.email_field :email, class: "form-control" %>
 
-      <%= f.label :birthday, t("activerecord.attributes.user.birthday") %>
-      <%= f.date_field :birthday, class: "form-control" %>
+      <%= f.label :date_of_birth %>
+      <%= f.date_field :date_of_birth, class: "form-control" %>
 
-      <%= f.label :gender, t("activerecord.attributes.user.gender") %>
+      <%= f.label :gender %>
       <%= f.select :gender,
-            User.genders.keys.map { |g| [t("gender.#{g}"), g] },
-            prompt: t("views.users.new.select_gender"),
-            class: "form-control" %>
+                    User.genders.keys.map {|g| [t("gender.#{g}"), g]},
+                    prompt: t(".select_gender"),
+                    class: "form-control" %>
 
-      <%= f.label :password, t("activerecord.attributes.user.password") %>
-      <%= f.password_field :password %>
+      <%= f.label :password %>
+      <%= f.password_field :password, class: "form-control" %>
 
-      <%= f.label :password_confirmation, t("activerecord.attributes.user.password_confirmation") %>
-      <%= f.password_field :password_confirmation %>
+      <%= f.label :password_confirmation, t(".confirmation") %>
+      <%= f.password_field :password_confirmation, class: "form-control" %>
 
       <%= f.submit t(".create_account"), class: "btn btn-primary" %>
     <% end %>

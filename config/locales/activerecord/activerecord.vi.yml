@@ -3,6 +3,7 @@ vi:
     models:
       user: "Người dùng"
       product: "Sản phẩm"
+      
     attributes:
       product:
         name: "Tên sản phẩm"

@@ -92,10 +92,14 @@ vi:
       date_label: "Ngày"
 
   users:
-      new:
-        title: "Đăng ký tài khoản"
-        select_gender: "Chọn giới tính"
-        create_account: "Tạo tài khoản"
-      show:
-        created_at: "Ngày tạo"
-        updated_at: "Cập nhật lần cuối"
+    not_found: "Không tìm thấy người dùng"
+    new:
+      title: "Đăng ký tài khoản"
+      confirmation: "Xác nhận mật khẩu"
+      create_account: "Tạo tài khoản"
+    show:
+      title: "Thông tin người dùng"
+      created_at: "Ngày tạo"
+      updated_at: "Cập nhật lúc"
+    created: "Người dùng đã được tạo thành công."
+

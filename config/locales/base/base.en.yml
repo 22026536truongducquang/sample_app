@@ -92,11 +92,13 @@ en:
       date_label: "Date"
 
   users:
-      new:
-        title: "Đăng ký tài khoản"
-        select_gender: "Chọn giới tính"
-        create_account: "Tạo tài khoản"
-      show:
-        title: "Thông tin người dùng"
-        created_at: "Ngày tạo"
-        updated_at: "Cập nhật lần cuối"
+    not_found: "User not found"
+    new:
+      title: "Sign Up"
+      confirmation: "Password Confirmation"
+      create_account: "Create Account"
+    show:
+      title: "User Information"
+      created_at: "Created At"
+      updated_at: "Updated At"
+    created: "User was successfully created."

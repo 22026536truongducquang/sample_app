@@ -5,11 +5,10 @@
     <section class="user_info">
       <h1>
         <%= gravatar_for @user %>
-        <%= t("activerecord.attributes.user.name") %>: <%= @user.name %>
+        <%= @user.name %>
+        <p><%= t(".created_at") %>: <%= @user.created_at.strftime("%d/%m/%Y %H:%M:%S") %></p>
+        <p><%= t(".updated_at") %>: <%= @user.updated_at.strftime("%d/%m/%Y %H:%M:%S") %></p>
       </h1>
-
-      <p><%= t("activerecord.attributes.user.created_at") %>: <%= l(@user.created_at, format: :long) %></p>
-      <p><%= t("activerecord.attributes.user.updated_at") %>: <%= l(@user.updated_at, format: :long) %></p>
     </section>
   </aside>
 </div>
