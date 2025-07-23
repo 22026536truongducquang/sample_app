@@ -2,6 +2,7 @@ vi:
   languages:
     en: "Tiếng Anh"
     vi: "Tiếng Việt"
+
   errors:
     template:
       header:
@@ -18,53 +19,27 @@ vi:
     help: "Trợ giúp"
     login: "Đăng nhập"
 
-  products:
-    index:
-      title: "Sản phẩm"
-    attributes:
-      name: "Tên"
-    create:
-      success: "Tạo sản phẩm thành công."
-    destroy:
-      success: "Xóa sản phẩm thành công."
-    new_product: "Sản phẩm mới"
-    editing_product: "Chỉnh sửa sản phẩm"
-    back_to_products: "Quay lại danh sách sản phẩm"
-    destroy_product: "Xóa sản phẩm này"
-    edit_product: "Chỉnh sửa sản phẩm này"
-    new_product: "Thêm sản phẩm mới"
-    not_found: "Không tìm thấy sản phẩm."
-    show_product: "Xem sản phẩm này"
-    update:
-      success: "Cập nhật sản phẩm thành công."
-
   static_pages:
     help:
+      title: "Trợ giúp"
+      heading: "Trợ giúp"
       description_html: >
         Nhận trợ giúp về Ruby on Rails Tutorial tại
         %{link1}.
         Để nhận trợ giúp về ứng dụng mẫu này, xem
         %{link2}
         cuốn sách.
-      heading: "Trợ giúp"
       link1: "Trang trợ giúp Ruby on Rails Tutorial"
       link1_url: "http://www.railstutorial.org/help"
       link2: "Ruby on Rails Tutorial"
       link2_url: "http://www.railstutorial.org/book"
-      title: "Trợ giúp"
 
     home:
+      title: "Trang chủ"
+      heading: "Ứng dụng mẫu"
       description_html: >
         Đây là trang chủ của
         %{link}
         ứng dụng mẫu.
-      heading: "Ứng dụng mẫu"
       link: "Ruby on Rails Tutorial"
       link_url: "http://www.railstutorial.org/"
-      title: "Trang chủ"
-
-  zones:
-    new_zone: "Khu vực mới"
-    edit_zone: "Chỉnh sửa khu vực"
-    zone_label: "Khu vực"
-    date_label: "Ngày"
