@@ -13,6 +13,7 @@ en:
         password: "Password"
         password_confirmation: "Password Confirmation"
         date_of_birth: "Date of Birth"
+        genders: "Gender"
         gender:
           male: "Nam"
           female: "Nữ"

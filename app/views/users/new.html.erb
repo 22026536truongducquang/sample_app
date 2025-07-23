@@ -16,11 +16,11 @@
       <%= f.label :date_of_birth %>
       <%= f.date_field :date_of_birth, class: "form-control" %>
 
-      <%= f.label :gender %>
+      <%= f.label :genders %>
       <%= f.select :gender,
-                    User.genders.keys.map {|g| [t("gender.#{g}"), g]},
-                    prompt: t(".select_gender"),
-                    class: "form-control" %>
+              User.genders.keys.map { |g| [t("activerecord.attributes.user.gender.#{g}"), g] },
+              prompt: t(".select_gender"),
+              class: "form-control" %>
 
       <%= f.label :password %>
       <%= f.password_field :password, class: "form-control" %>

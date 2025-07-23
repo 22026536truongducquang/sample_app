@@ -2,18 +2,32 @@ en:
   products:
     index:
       title: "Products"
-    attributes:
       name: "Name"
+      empty: "No products available."
+      new: "Add Product"
+      empty: "Has no product"
+    show:
+      back: "Back to List"
+      edit: "Edit Product"
+      destroy: "Delete Product"
+      confirm_destroy: "Are you sure you want to delete this product?"
+    new:
+      title: "Create New Product"
+      back: "Back to List"
+    edit:
+      title: "Edit Product"
+      show: "Show this Product"
+      back: "Back to List"
+    form:
+      name: "Name"
+    actions:
+      show: "Show"
+      edit: "Edit"
+      destroy: "Delete"
+      confirm_destroy: "Are you sure you want to delete this product?"
     create:
       success: "Product was successfully created."
-    destroy:
-      success: "Product was successfully deleted."
-    new_product: "New product"
-    editing_product: "Editing product"
-    back_to_products: "Back to products"
-    destroy_product: "Destroy this product"
-    edit_product: "Edit this product"
-    not_found: "Product not found."
-    show_product: "Show this product"
     update:
       success: "Product was successfully updated."
+    destroy:
+      success: "Product was successfully deleted."

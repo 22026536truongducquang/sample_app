@@ -13,7 +13,8 @@ vi:
         password: "Mật khẩu"
         password_confirmation: "Xác nhận mật khẩu"
         date_of_birth: "Ngày sinh"
-        gender:
+        genders: "Giới tính"
+        gender: 
           male: "Nam"
           female: "Nữ"
           other: "Khác"

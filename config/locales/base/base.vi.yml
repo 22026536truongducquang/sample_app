@@ -17,7 +17,7 @@ vi:
     app_name: "Ứng dụng mẫu"
     home: "Trang chủ"
     help: "Trợ giúp"
-    sign_up: "Dăng kí"
+    sign_up: "Đăng kí"
     login: "Đăng nhập"
 
   static_pages:
@@ -45,39 +45,6 @@ vi:
       link: "Ruby on Rails Tutorial"
       link_url: "http://www.railstutorial.org/"
 
-  products:
-    index:
-      title: "Sản phẩm"
-      name: "Tên"
-      empty: "Không có sản phẩm nào."
-      new: "Thêm sản phẩm"
-      empty: "Không có sản phẩm nào"
-    show:
-      back: "Quay lại danh sách"
-      edit: "Chỉnh sửa sản phẩm"
-      destroy: "Xóa sản phẩm"
-      confirm_destroy: "Bạn có chắc muốn xóa sản phẩm này không?"
-    new:
-      title: "Tạo sản phẩm mới"
-      back: "Quay lại danh sách"
-    edit:
-      title: "Chỉnh sửa sản phẩm"
-      show: "Xem sản phẩm này"
-      back: "Quay lại danh sách"
-    form:
-      name: "Tên"
-    actions:
-      show: "Xem"
-      edit: "Sửa"
-      destroy: "Xóa"
-      confirm_destroy: "Bạn có chắc muốn xóa sản phẩm này không?"
-    create:
-      success: "Tạo sản phẩm thành công."
-    update:
-      success: "Cập nhật sản phẩm thành công."
-    destroy:
-      success: "Xóa sản phẩm thành công."
-
   demo_partials:
     new:
       title: "Tạo mới khu vực"
@@ -91,15 +58,5 @@ vi:
       zone_label: "Khu vực"
       date_label: "Ngày"
 
-  users:
-    not_found: "Không tìm thấy người dùng"
-    new:
-      title: "Đăng ký tài khoản"
-      confirmation: "Xác nhận mật khẩu"
-      create_account: "Tạo tài khoản"
-    show:
-      title: "Thông tin người dùng"
-      created_at: "Ngày tạo"
-      updated_at: "Cập nhật lúc"
-    created: "Người dùng đã được tạo thành công."
+  
 
