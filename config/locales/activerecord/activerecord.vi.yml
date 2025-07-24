@@ -8,7 +8,7 @@ vi:
       product:
         name: "Tên sản phẩm"
       user:
-        name: "Họ tên"
+        name: "Họ và tên"
         email: "Email"
         password: "Mật khẩu"
         password_confirmation: "Xác nhận mật khẩu"
