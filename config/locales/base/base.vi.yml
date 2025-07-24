@@ -24,43 +24,4 @@ vi:
     settings: "Cài đặt"
     log_out: "Đăng xuất"
 
-  static_pages:
-    help:
-      title: "Trợ giúp"
-      heading: "Trợ giúp"
-      description_html: >
-        Nhận trợ giúp về Ruby on Rails Tutorial tại
-        %{link1}.
-        Để nhận trợ giúp về ứng dụng mẫu này, xem
-        %{link2}
-        cuốn sách.
-      link1: "Trang trợ giúp Ruby on Rails Tutorial"
-      link1_url: "http://www.railstutorial.org/help"
-      link2: "Ruby on Rails Tutorial"
-      link2_url: "http://www.railstutorial.org/book"
-
-    home:
-      title: "Trang chủ"
-      heading: "Ứng dụng mẫu"
-      description_html: >
-        Đây là trang chủ của
-        %{link}
-        ứng dụng mẫu.
-      link: "Ruby on Rails Tutorial"
-      link_url: "http://www.railstutorial.org/"
-
-  demo_partials:
-    new:
-      title: "Tạo mới khu vực"
-      zone: "Khu vực: %{zone}"
-      date: "Ngày: %{date}"
-    edit:
-      title: "Chỉnh sửa khu vực"
-      zone: "Khu vực: %{zone}"
-      date: "Ngày: %{date}"
-    form:
-      zone_label: "Khu vực"
-      date_label: "Ngày"
-
   
-
