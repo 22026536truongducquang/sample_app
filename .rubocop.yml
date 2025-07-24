@@ -426,7 +426,8 @@ Layout/SpaceAroundEqualsInParameterDefault:
     - no_space
 
 Layout/SpaceBeforeBlockBraces:
-  EnforcedStyle: no_space
+  Enabled: true
+  EnforcedStyle: space
   SupportedStyles:
     - space
     - no_space

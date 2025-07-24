@@ -19,17 +19,3 @@ en:
     help: "Help"
     sign_up: "Sign up"
     login: "Log in"
-
-  demo_partials:
-    new:
-      title: "Create New Zone"
-      zone: "Zone: %{zone}"
-      date: "Date: %{date}"
-    edit:
-      title: "Edit Zone"
-      zone: "Zone: %{zone}"
-      date: "Date: %{date}"
-    form:
-      zone_label: "Zone"
-      date_label: "Date"
-
