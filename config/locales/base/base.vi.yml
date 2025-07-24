@@ -17,29 +17,9 @@ vi:
     app_name: "Ứng dụng mẫu"
     home: "Trang chủ"
     help: "Trợ giúp"
+    sign_up: "Đăng kí"
     login: "Đăng nhập"
 
-  static_pages:
-    help:
-      title: "Trợ giúp"
-      heading: "Trợ giúp"
-      description_html: >
-        Nhận trợ giúp về Ruby on Rails Tutorial tại
-        %{link1}.
-        Để nhận trợ giúp về ứng dụng mẫu này, xem
-        %{link2}
-        cuốn sách.
-      link1: "Trang trợ giúp Ruby on Rails Tutorial"
-      link1_url: "http://www.railstutorial.org/help"
-      link2: "Ruby on Rails Tutorial"
-      link2_url: "http://www.railstutorial.org/book"
-
-    home:
-      title: "Trang chủ"
-      heading: "Ứng dụng mẫu"
-      description_html: >
-        Đây là trang chủ của
-        %{link}
-        ứng dụng mẫu.
-      link: "Ruby on Rails Tutorial"
-      link_url: "http://www.railstutorial.org/"
+  time:
+    formats:
+      default: "%d/%m/%Y %H:%M"

@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+  USER_PERMIT = %i(name email password password_confirmation date_of_birth
+gender).freeze
+
   has_secure_password
   # has_secure_password cung cấp: # rubocop:disable Style/AsciiComments
   # - Các thuộc tính ảo: password, password_confirmation # rubocop:disable Style/AsciiComments
@@ -21,6 +24,8 @@ class User < ApplicationRecord
             format: {with: VALID_EMAIL_REGEX},
             uniqueness: {case_sensitive: false}
   validate :date_of_birth_must_be_within_last_100_years
+
+  enum gender: {male: 0, female: 1, other: 2}
 
   private
 
