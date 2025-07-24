@@ -1,3 +1,3 @@
 class Product < ApplicationRecord
-  scope :newest_first, ->{order(created_at: :desc)}
+  scope :newest_first, -> {order(created_at: :desc)}
 end

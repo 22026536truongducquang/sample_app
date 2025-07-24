@@ -22,9 +22,9 @@ class ProductsController < ApplicationController
           redirect_to product_url(@product),
                       notice: t("products.create.success")
         end
-        format.json{render :show, status: :created, location: @product}
+        format.json {render :show, status: :created, location: @product}
       else
-        format.html{render :new, status: :unprocessable_entity}
+        format.html {render :new, status: :unprocessable_entity}
         format.json do
           render json: @product.errors, status: :unprocessable_entity
         end
@@ -39,9 +39,9 @@ class ProductsController < ApplicationController
           redirect_to product_url(@product),
                       notice: t("products.update.success")
         end
-        format.json{render :show, status: :ok, location: @product}
+        format.json {render :show, status: :ok, location: @product}
       else
-        format.html{render :edit, status: :unprocessable_entity}
+        format.html {render :edit, status: :unprocessable_entity}
         format.json do
           render json: @product.errors, status: :unprocessable_entity
         end
@@ -57,7 +57,7 @@ class ProductsController < ApplicationController
         redirect_to products_url,
                     notice: t("products.destroy.success")
       end
-      format.json{head :no_content}
+      format.json {head :no_content}
     end
   end
 
