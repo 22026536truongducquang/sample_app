@@ -19,6 +19,10 @@ en:
     help: "Help"
     sign_up: "Sign up"
     login: "Log in"
+    account: "Account"
+    profile: "Profile"
+    settings: "Settings"
+    logout: "Logout"
 
   demo_partials:
     new:

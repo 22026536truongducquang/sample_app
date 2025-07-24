@@ -1,5 +1,6 @@
 vi:
   sessions:
+    invalid_email_or_password: "email hoặc mật khẩu không đúng"
     new:
       log_in: "Đăng nhập"
       new_user?: "Người dùng mới?"

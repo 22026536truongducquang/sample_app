@@ -1,5 +1,6 @@
 en:
   sessions:
+    invalid_email_or_password: "invalid email or password"
     new:
       log_in: "Log in"
       new_user?: "New user?"

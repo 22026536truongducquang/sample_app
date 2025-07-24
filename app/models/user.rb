@@ -39,4 +39,13 @@ class User < ApplicationRecord
       errors.add(:date_of_birth, :in_future)
     end
   end
+
+  def self.digest string # rubocop:disable Lint/IneffectiveAccessModifier
+    cost = if ActiveModel::SecurePassword.min_cost
+             BCrypt::Engine::MIN_COST
+           else
+             BCrypt::Engine.cost
+           end
+    BCrypt::Password.create(string, cost:)
+  end
 end
