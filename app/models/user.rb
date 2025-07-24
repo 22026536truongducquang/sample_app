@@ -24,12 +24,6 @@ class User < ApplicationRecord
             uniqueness: {case_sensitive: false}
   validate :date_of_birth_must_be_within_last_100_years
 
-  private
-
-  def downcase_email
-    email.downcase!
-  end
-
   def date_of_birth_must_be_within_last_100_years
     return if date_of_birth.blank?
 
@@ -40,12 +34,35 @@ class User < ApplicationRecord
     end
   end
 
-  def self.digest string # rubocop:disable Lint/IneffectiveAccessModifier
-    cost = if ActiveModel::SecurePassword.min_cost
-             BCrypt::Engine::MIN_COST
-           else
-             BCrypt::Engine.cost
-           end
-    BCrypt::Password.create(string, cost:)
+  attr_accessor :remember_token
+
+  def remember
+    self.remember_token = User.new_token
+    update_column :remember_digest, User.digest(remember_token)
+  end
+
+  def authenticated? remember_token
+    BCrypt::Password.new(remember_digest).is_password? remember_token
+  end
+
+  class << self
+    def self.digest string
+      cost = if ActiveModel::SecurePassword.min_cost
+               BCrypt::Engine::MIN_COST
+             else
+               BCrypt::Engine.cost
+             end
+      BCrypt::Password.create(string, cost:)
+    end
+
+    def new_token
+      SecureRandom.urlsafe_base64endend
+    end
+  end
+
+  private
+
+  def downcase_email
+    email.downcase!
   end
 end
