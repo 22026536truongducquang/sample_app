@@ -20,10 +20,7 @@ class SessionsController < ApplicationController
 
   def destroy
     log_out
-<<<<<<< HEAD
-=======
     flash[:success] = t(".logout_success")
->>>>>>> chapter_8a
     redirect_to root_url, status: :see_other
   end
 end
