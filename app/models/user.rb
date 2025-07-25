@@ -27,8 +27,6 @@ gender).freeze
             uniqueness: {case_sensitive: false}
   validate :date_of_birth_must_be_within_last_100_years
 
-  enum gender: {male: 0, female: 1, other: 2}
-
   private
 
   def downcase_email
