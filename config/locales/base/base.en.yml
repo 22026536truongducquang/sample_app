@@ -23,12 +23,8 @@ en:
     profile: "Profile"
     settings: "Settings"
     logout: "Logout"
-<<<<<<< HEAD
- 
-=======
   
   time:
     formats:
       default: "%d/%m/%Y %H:%M"
  
->>>>>>> chapter_8a

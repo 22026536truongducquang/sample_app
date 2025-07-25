@@ -20,10 +20,6 @@ Rails.application.routes.draw do
     delete "logout",to: "sessions#destroy",     as: :logout
 
     resources :products
-<<<<<<< HEAD
-    resources :users
-=======
     resources :users, only: %i[show]
->>>>>>> chapter_8a
   end
 end

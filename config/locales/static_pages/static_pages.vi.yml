@@ -9,13 +9,7 @@ vi:
         Để nhận trợ giúp về ứng dụng mẫu này, hãy xem
         %{link2}.
       link1: "Trang trợ giúp Hướng dẫn Ruby on Rails"
-<<<<<<< HEAD
-      link1_url: "http://www.railstutorial.org/help"
       link2: "Hướng dẫn Ruby on Rails"
-      link2_url: "http://www.railstutorial.org/book"
-=======
-      link2: "Hướng dẫn Ruby on Rails"
->>>>>>> chapter_8a
 
     home:
       title: "Trang chủ"
@@ -25,7 +19,3 @@ vi:
         %{link},
         một ứng dụng mẫu.
       link: "Hướng dẫn Ruby on Rails"
-<<<<<<< HEAD
-      link_url: "http://www.railstutorial.org/"
-=======
->>>>>>> chapter_8a

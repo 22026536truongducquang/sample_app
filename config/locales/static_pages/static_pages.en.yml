@@ -10,13 +10,7 @@ en:
         %{link2}
         book.
       link1: "Ruby on Rails Tutorial Help Page"
-<<<<<<< HEAD
-      link1_url: "http://www.railstutorial.org/help"
       link2: "Ruby on Rails Tutorial"
-      link2_url: "http://www.railstutorial.org/book"
-=======
-      link2: "Ruby on Rails Tutorial"
->>>>>>> chapter_8a
 
     home:
       title: "Home"
@@ -26,7 +20,3 @@ en:
         %{link}
         sample application.
       link: "Ruby on Rails Tutorial"
-<<<<<<< HEAD
-      link_url: "http://www.railstutorial.org/"
-=======
->>>>>>> chapter_8a

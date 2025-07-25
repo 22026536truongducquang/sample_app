@@ -6,13 +6,8 @@
       <h1>
         <%= gravatar_for @user %>
         <%= @user.name %>
-<<<<<<< HEAD
-        <p><%= t(".created_at") %>: <%= @user.created_at.strftime("%d/%m/%Y %H:%M:%S") %></p>
-        <p><%= t(".updated_at") %>: <%= @user.updated_at.strftime("%d/%m/%Y %H:%M:%S") %></p>
-=======
         <p><%= t(".created_at") %>: <%= l(@user.created_at) %></p>
         <p><%= t(".updated_at") %>: <%= l(@user.updated_at) %></p>
->>>>>>> chapter_8a
       </h1>
     </section>
   </aside>
