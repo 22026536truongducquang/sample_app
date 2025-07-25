@@ -18,8 +18,13 @@ en:
     home: "Home"
     help: "Help"
     sign_up: "Sign up"
-    login: "Log in"
-
+    log_in: "Log in"
+    account: "Account"
+    profile: "Profile"
+    settings: "Settings"
+    logout: "Logout"
+  
   time:
     formats:
       default: "%d/%m/%Y %H:%M"
+ 
