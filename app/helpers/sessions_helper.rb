@@ -4,10 +4,6 @@ module SessionsHelper
     session[:user_id] = user.id
   end
 
-  def current_user
-    @current_user ||= find_user_from_session || find_user_from_cookies
-  end
-
   def logged_in?
     current_user.present?
   end
@@ -22,6 +18,10 @@ module SessionsHelper
     forget current_user
     reset_session
     @current_user = nil
+  end
+
+  def current_user
+    @current_user ||= find_user_from_session || find_user_from_cookies
   end
 
   def remember user
