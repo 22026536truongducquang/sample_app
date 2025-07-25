@@ -18,8 +18,12 @@ vi:
     home: "Trang chủ"
     help: "Trợ giúp"
     sign_up: "Đăng kí"
-    login: "Đăng nhập"
-
+    log_in: "Đăng nhập"
+    account: "Tài khoản"
+    profile: "Hồ sơ"
+    settings: "Cài đặt"
+    log_out: "Đăng xuất"
+  
   time:
     formats:
       default: "%d/%m/%Y %H:%M"
