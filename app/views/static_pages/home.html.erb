@@ -2,6 +2,6 @@
 <h1><%= t(".heading") %></h1>
 <p>
   <%= t(".description_html",
-    link: link_to(t(".link"), t(".link_url"))
+    link: link_to(t(".link"), Settings.links.rails_home, target: "_blank")
   ).html_safe %>
 </p>

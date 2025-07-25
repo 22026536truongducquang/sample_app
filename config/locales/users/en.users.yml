@@ -1,6 +1,11 @@
 en:
   users:
+<<<<<<< HEAD
     not_found: "User not found"
+=======
+    show:
+      not_found: "User not found"
+>>>>>>> chapter_8a
     new:
       title: "Sign Up"
       confirmation: "Password Confirmation"
@@ -9,5 +14,9 @@ en:
       title: "User Information"
       created_at: "Created At"
       updated_at: "Updated At"
+<<<<<<< HEAD
     created: 
+=======
+    create: 
+>>>>>>> chapter_8a
       success: "User was successfully created."

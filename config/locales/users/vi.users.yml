@@ -1,6 +1,11 @@
 vi:
   users:
+<<<<<<< HEAD
     not_found: "Không tìm thấy người dùng"
+=======
+    show:
+      not_found: "Không tìm thấy người dùng"
+>>>>>>> chapter_8a
     new:
       title: "Đăng ký tài khoản"
       confirmation: "Xác nhận mật khẩu"
@@ -9,5 +14,9 @@ vi:
       title: "Thông tin người dùng"
       created_at: "Ngày tạo"
       updated_at: "Cập nhật lúc"
+<<<<<<< HEAD
     created: 
+=======
+    create: 
+>>>>>>> chapter_8a
       success: "Người dùng đã được tạo thành công."

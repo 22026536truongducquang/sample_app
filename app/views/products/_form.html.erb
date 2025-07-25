@@ -1,17 +1,10 @@
 <%= form_with(model: product) do |form| %>
   <% if product.errors.any? %>
-<<<<<<< HEAD
     <div class="error-message">
       <h2>
         <%= t("errors.template.header", count: product.errors.count, model: t("activerecord.models.product")) %>
       </h2>
 
-=======
-    <div style="color: red">
-      <h2>
-        <%= t("errors.template.header", count: product.errors.count, model: product.class.model_name.human) %>
-      </h2>
->>>>>>> 3d7a312 (Update pull_request_template.md)
       <ul>
         <% product.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -21,11 +14,7 @@
   <% end %>
 
   <div>
-<<<<<<< HEAD
     <%= form.label :name, t("activerecord.attributes.product.name"), class: "form-label" %>
-=======
-    <%= form.label :name, style: "display: block" %>
->>>>>>> 3d7a312 (Update pull_request_template.md)
     <%= form.text_field :name %>
   </div>
 

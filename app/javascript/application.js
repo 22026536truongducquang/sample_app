@@ -1,4 +1,10 @@
 // Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
+<<<<<<< HEAD
 import "@hotwired/turbo-rails"
 import "controllers"
 import "custom/menu"
+=======
+import '@hotwired/turbo-rails'
+import 'controllers'
+import 'custom/menu'
+>>>>>>> chapter_8a

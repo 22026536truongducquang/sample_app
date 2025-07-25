@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+  USER_PERMIT = %i(name email password password_confirmation date_of_birth
+gender).freeze
+
   has_secure_password
   # has_secure_password cung cấp: # rubocop:disable Style/AsciiComments
   # - Các thuộc tính ảo: password, password_confirmation # rubocop:disable Style/AsciiComments
@@ -60,7 +63,7 @@ class User < ApplicationRecord
     end
 
     def new_token
-      SecureRandom.urlsafe_base64endend
+      SecureRandom.urlsafe_base64
     end
   end
 

@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :load_user, only: :show
+
   def new
     @user = User.new
   end
@@ -9,24 +11,26 @@ class UsersController < ApplicationController
       reset_session
       log_in @user
       remember @user
-      flash[:success] = t("users.created.success")
+      flash[:success] = t(".success")
       redirect_to @user, status: :see_other
     else
       render :new, status: :unprocessable_entity
     end
   end
 
-  def show
+  def show; end
+
+  private
+
+  def load_user
     @user = User.find_by id: params[:id]
     return if @user
 
-    flash[:warning] = "Not found user!"
-    redirect_to root_path
+    flash[:warning] = t(".not_found")
+    redirect_to root_path, status: :see_other
   end
 
-  private
   def user_params
-    params.require(:user).permit :name, :email, :password,
-                                 :password_confirmation
+    params.require(:user).permit(User::USER_PERMIT)
   end
 end
