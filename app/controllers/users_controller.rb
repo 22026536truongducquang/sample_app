@@ -20,6 +20,14 @@ class UsersController < ApplicationController
 
   def show; end
 
+  def edit
+    @user = User.find_by(id: params[:id])
+    return if @user
+
+    flash[:warning] = "Not found user!"
+    redirect_to root_path
+  end
+
   private
 
   def load_user
