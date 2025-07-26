@@ -9,12 +9,12 @@ class SessionsController < ApplicationController
     log_in @user
     if params.dig(:session,
                   :remember_me) == REMEMBER_ME_SELECTED
-      remember(user)
+      remember @user
     else
-      forget(user)
+      forget @user
     end
     flash[:success] = t(".login_success")
-    redirect_to user, status: :see_other
+    redirect_to user_path(@user), status: :see_other
   end
 
   def destroy
