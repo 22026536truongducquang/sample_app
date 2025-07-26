@@ -20,6 +20,11 @@ module SessionsHelper
     @current_user = nil
   end
 
+  def delete_session
+    session.delete(:user_id)
+    session.delete(:session_token)
+  end
+
   def current_user
     @current_user ||= find_user_from_session || find_user_from_cookies
   end
