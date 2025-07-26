@@ -2,13 +2,12 @@ en:
   users:
     show:
       not_found: "User not found"
+      title: "User Information"
+      created_at: "Created At"
+      updated_at: "Updated At"
     new:
       title: "Sign Up"
       confirmation: "Password Confirmation"
       create_account: "Create Account"
-    show:
-      title: "User Information"
-      created_at: "Created At"
-      updated_at: "Updated At"
     create: 
       success: "User was successfully created."
