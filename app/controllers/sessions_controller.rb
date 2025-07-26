@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
 
   def create
     reset_session
-    log_in user
+    log_in @user
     if params.dig(:session,
                   :remember_me) == REMEMBER_ME_SELECTED
       remember(user)
