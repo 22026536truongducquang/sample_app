@@ -27,15 +27,6 @@ gender).freeze
             uniqueness: {case_sensitive: false}
   validate :date_of_birth_must_be_within_last_100_years
 
-<<<<<<< HEAD
-=======
-  private
-
-  def downcase_email
-    email.downcase!
-  end
-
->>>>>>> chapter_8
   def date_of_birth_must_be_within_last_100_years
     return if date_of_birth.blank?
 
@@ -46,7 +37,6 @@ gender).freeze
     end
   end
 
-<<<<<<< HEAD
   attr_accessor :remember_token
 
   def remember
@@ -81,14 +71,5 @@ gender).freeze
 
   def downcase_email
     email.downcase!
-=======
-  def self.digest string # rubocop:disable Lint/IneffectiveAccessModifier
-    cost = if ActiveModel::SecurePassword.min_cost
-             BCrypt::Engine::MIN_COST
-           else
-             BCrypt::Engine.cost
-           end
-    BCrypt::Password.create(string, cost:)
->>>>>>> chapter_8
   end
 end
