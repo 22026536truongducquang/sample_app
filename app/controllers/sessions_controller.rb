@@ -23,6 +23,8 @@ class SessionsController < ApplicationController
     redirect_to root_url, status: :see_other
   end
 
+  private
+
   def find_user_and_validate
     @user = User.find_by(email: params.dig(:session, :email)&.downcase)
 
