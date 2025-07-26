@@ -13,12 +13,11 @@ en:
         password: "Password"
         password_confirmation: "Password Confirmation"
         date_of_birth: "Date of Birth"
-        genders: "Gender"
-        gender:
-          male: "Nam"
-          female: "Nữ"
-          other: "Khác"
-
+        gender: "Gender"
+        gender_options:
+          male: "Male"
+          female: "Female"
+          other: "Other"
     errors:
       models:
         user:
@@ -30,6 +29,8 @@ en:
               blank: "can't be blank"
               invalid: "is invalid"
               taken: "has already been taken"
+            gender:
+              blank: "can't be blank"
             password:
               blank: "can't be blank"
               too_short: "is too short (minimum is %{count} characters)"

@@ -7,9 +7,16 @@ en:
       updated_at: "Updated At"
     new:
       title: "Sign Up"
-      confirmation: "Password Confirmation"
-      create_account: "Create Account"
+      create_account: "Create account"
     create: 
       success: "User was successfully created."
     edit:
       title: "Update your profile"
+      submit: "Submit"
+      not_found: "User not found"
+    form:
+      confirmation: "Password Confirmation"
+    update:
+      success: "Update successfully"
+
+

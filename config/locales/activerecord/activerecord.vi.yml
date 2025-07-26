@@ -13,8 +13,8 @@ vi:
         password: "Mật khẩu"
         password_confirmation: "Xác nhận mật khẩu"
         date_of_birth: "Ngày sinh"
-        genders: "Giới tính"
-        gender: 
+        gender: "Giới tính"
+        gender_options:
           male: "Nam"
           female: "Nữ"
           other: "Khác"
@@ -30,6 +30,8 @@ vi:
               blank: "không được để trống"
               invalid: "không hợp lệ"
               taken: "đã được sử dụng"
+            gender:
+              blank: "không được để trống"
             password:
               blank: "không được để trống"
               too_short: "quá ngắn (tối thiểu %{count} ký tự)"

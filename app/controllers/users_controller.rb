@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
-  before_action :load_user, only: :show
-
+  before_action :logged_in_user, only: %i(edit update)
+  before_action :load_user, only: %i(show edit update)
+  before_action :correct_user, only: %i(edit update)
   def new
     @user = User.new
   end
@@ -20,14 +21,16 @@ class UsersController < ApplicationController
 
   def show; end
 
-  def edit
-    @user = User.find_by(id: params[:id])
-    return if @user
+  def edit; end
 
-    flash[:warning] = "Not found user!"
-    redirect_to root_path
+  def update
+    if @user.update user_params
+      flash[:success] = t(".success")
+      redirect_to @user
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
-
   private
 
   def load_user
@@ -40,5 +43,20 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(User::USER_PERMIT)
+  end
+
+  def logged_in_user
+    unless logged_in? # rubocop:disable Style/GuardClause
+      store_location
+      flash[:danger] = "Please log in."
+      redirect_to login_url
+    end
+  end
+
+  def correct_user
+    return if current_user? @user
+
+    flash[:error] = "You cannot edit this account."
+    redirect_to root_url
   end
 end

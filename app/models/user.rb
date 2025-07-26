@@ -26,6 +26,11 @@ gender).freeze
             format: {with: VALID_EMAIL_REGEX},
             uniqueness: {case_sensitive: false}
   validate :date_of_birth_must_be_within_last_100_years
+  validates :gender, presence: true
+  validates :password, presence: true,
+                     length: {minimum: Settings.digits.digit_6},
+                     allow_nil: true,
+                     if: :password_required?
 
   def date_of_birth_must_be_within_last_100_years
     return if date_of_birth.blank?
@@ -53,7 +58,7 @@ gender).freeze
   end
 
   class << self
-    def self.digest string
+    def digest string
       cost = if ActiveModel::SecurePassword.min_cost
                BCrypt::Engine::MIN_COST
              else
@@ -71,5 +76,9 @@ gender).freeze
 
   def downcase_email
     email.downcase!
+  end
+
+  def password_required?
+    password_digest.blank? || !password.nil?
   end
 end

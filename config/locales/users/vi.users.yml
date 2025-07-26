@@ -7,9 +7,15 @@ vi:
       updated_at: "Cập nhật lúc"
     new:
       title: "Đăng ký tài khoản"
-      confirmation: "Xác nhận mật khẩu"
+      submit: "Xác nhận"
       create_account: "Tạo tài khoản"
     create: 
       success: "Người dùng đã được tạo thành công."
     edit:
       title: "Chỉnh sửa hồ sơ của bạn"
+      submit: "Xác nhận"
+      not_found: "Không tìm thấy người dùng"
+    form:
+      confirmation: "Xác nhận mật khẩu"
+    update:
+      success: "Cập nhật thành công"
