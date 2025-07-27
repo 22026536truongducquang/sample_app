@@ -15,6 +15,8 @@ gender).freeze
   EMAIL_MAX_LENGTH = 255
   MAX_YEARS_AGO = 100
 
+  attr_accessor :remember_token
+
   before_save :downcase_email
 
   scope :recent, -> {order(created_at: :desc)}
@@ -27,12 +29,6 @@ gender).freeze
             uniqueness: {case_sensitive: false}
   validate :date_of_birth_must_be_within_last_100_years
 
-  private
-
-  def downcase_email
-    email.downcase!
-  end
-
   def date_of_birth_must_be_within_last_100_years
     return if date_of_birth.blank?
 
@@ -43,12 +39,37 @@ gender).freeze
     end
   end
 
-  def self.digest string # rubocop:disable Lint/IneffectiveAccessModifier
-    cost = if ActiveModel::SecurePassword.min_cost
-             BCrypt::Engine::MIN_COST
-           else
-             BCrypt::Engine.cost
-           end
-    BCrypt::Password.create(string, cost:)
+  def remember
+    self.remember_token = User.new_token
+    update_column :remember_digest, User.digest(remember_token)
+  end
+
+  def forget
+    update_column :remember_digest, nil
+  end
+
+  def authenticated? remember_token
+    BCrypt::Password.new(remember_digest).is_password? remember_token
+  end
+
+  class << self
+    def digest string
+      cost = if ActiveModel::SecurePassword.min_cost
+               BCrypt::Engine::MIN_COST
+             else
+               BCrypt::Engine.cost
+             end
+      BCrypt::Password.create(string, cost:)
+    end
+
+    def new_token
+      SecureRandom.urlsafe_base64
+    end
+  end
+
+  private
+
+  def downcase_email
+    email.downcase!
   end
 end
