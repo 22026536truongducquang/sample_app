@@ -15,7 +15,16 @@ vi:
       title: "Chỉnh sửa hồ sơ của bạn"
       submit: "Xác nhận"
       not_found: "Không tìm thấy người dùng"
+      change: "Thay đổi"
     form:
       confirmation: "Xác nhận mật khẩu"
     update:
       success: "Cập nhật thành công"
+    index:
+      title: "Tất cả người dùng"
+    destroy:
+      success: "Xóa người dùng thành công"
+      fail: "Xóa người dùng thất bại"
+    user:
+      delete: "Xóa"
+      are_you_sure?: "Bạn chắc chắn muốn xóa người dùng này ?"

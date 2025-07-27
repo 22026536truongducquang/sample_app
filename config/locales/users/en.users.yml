@@ -14,9 +14,16 @@ en:
       title: "Update your profile"
       submit: "Submit"
       not_found: "User not found"
+      change: "Change"
     form:
       confirmation: "Password Confirmation"
     update:
       success: "Update successfully"
-
-
+    index:
+      title: "All users"
+    destroy:
+      success: "Deleted user"
+      fail: "Delete fail"
+    user:
+      delete: "Delete"
+      are_you_sure?: "Are you sure to delete this user ?"

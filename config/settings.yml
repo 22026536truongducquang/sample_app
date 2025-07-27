@@ -4,3 +4,5 @@ links:
   rails_book: "http://www.railstutorial.org/book"
 digits:
   digit_6: 6
+pagy:
+  items: 10

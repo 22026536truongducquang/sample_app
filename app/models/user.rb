@@ -8,6 +8,8 @@ gender).freeze
   # - Trường password_digest để lưu hash # rubocop:disable Style/AsciiComments
   # - Phương thức authenticate(password) để xác thực # rubocop:disable Style/AsciiComments
 
+  scope :newest, -> {order(created_at: :desc)}
+
   enum gender: {male: 0, female: 1, other: 2}
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
