@@ -16,13 +16,15 @@ module SessionsHelper
 
   def log_out
     forget current_user
-    reset_session
+    delete_session_and_cookies
     @current_user = nil
   end
 
-  def delete_session
+  def delete_session_and_cookies
     session.delete(:user_id)
     session.delete(:session_token)
+    cookies.delete(:user_id)
+    cookies.delete(:remember_token)
   end
 
   def current_user
