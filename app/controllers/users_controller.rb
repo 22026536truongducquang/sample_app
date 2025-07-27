@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      reset_session
+      delete_session_and_cookies
       log_in @user
       remember @user
       flash[:success] = t(".success")
