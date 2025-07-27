@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   def new; end
 
   def create
-    delete_session_and_cookies
+    reset_session
     log_in @user
     if params.dig(:session,
                   :remember_me) == REMEMBER_ME_SELECTED
