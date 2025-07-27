@@ -8,6 +8,8 @@ gender).freeze
   # - Trường password_digest để lưu hash # rubocop:disable Style/AsciiComments
   # - Phương thức authenticate(password) để xác thực # rubocop:disable Style/AsciiComments
 
+  enum gender: {male: 0, female: 1, other: 2}
+
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   NAME_MAX_LENGTH = 50
   EMAIL_MAX_LENGTH = 255
@@ -25,14 +27,6 @@ gender).freeze
             uniqueness: {case_sensitive: false}
   validate :date_of_birth_must_be_within_last_100_years
 
-  enum gender: {male: 0, female: 1, other: 2}
-
-  private
-
-  def downcase_email
-    email.downcase!
-  end
-
   def date_of_birth_must_be_within_last_100_years
     return if date_of_birth.blank?
 
@@ -41,5 +35,41 @@ gender).freeze
     elsif date_of_birth > Time.zone.today
       errors.add(:date_of_birth, :in_future)
     end
+  end
+
+  attr_accessor :remember_token
+
+  def remember
+    self.remember_token = User.new_token
+    update_column :remember_digest, User.digest(remember_token)
+  end
+
+  def forget
+    update_column :remember_digest, nil
+  end
+
+  def authenticated? remember_token
+    BCrypt::Password.new(remember_digest).is_password? remember_token
+  end
+
+  class << self
+    def digest string
+      cost = if ActiveModel::SecurePassword.min_cost
+               BCrypt::Engine::MIN_COST
+             else
+               BCrypt::Engine.cost
+             end
+      BCrypt::Password.create(string, cost:)
+    end
+
+    def new_token
+      SecureRandom.urlsafe_base64
+    end
+  end
+
+  private
+
+  def downcase_email
+    email.downcase!
   end
 end
