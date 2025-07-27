@@ -5,8 +5,10 @@ class SessionsController < ApplicationController
   def new; end
 
   def create
-    delete_session_and_cookies
+    forwarding_url = session[:forwarding_url] # lưu lại trước
+    reset_session                           # xóa session cũ để tránh session fixation
     log_in @user
+    session[:forwarding_url] = forwarding_url if forwarding_url
     if params.dig(:session,
                   :remember_me) == REMEMBER_ME_SELECTED
       remember @user
