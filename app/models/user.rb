@@ -28,6 +28,12 @@ gender).freeze
             format: {with: VALID_EMAIL_REGEX},
             uniqueness: {case_sensitive: false}
   validate :date_of_birth_must_be_within_last_100_years
+  validates :gender, presence: true
+  validates :password, presence: true,
+                     length: {minimum: Settings.digits.digit_6},
+                     allow_nil: true,
+                     if: :password_required?
+  validate :password_presence_if_confirmation_provided
 
   def date_of_birth_must_be_within_last_100_years
     return if date_of_birth.blank?
@@ -48,8 +54,10 @@ gender).freeze
     update_column :remember_digest, nil
   end
 
-  def authenticated? remember_token
-    BCrypt::Password.new(remember_digest).is_password? remember_token
+  def authenticated? token
+    return false if remember_digest.blank?
+
+    BCrypt::Password.new(remember_digest).is_password?(token)
   end
 
   class << self
@@ -71,5 +79,15 @@ gender).freeze
 
   def downcase_email
     email.downcase!
+  end
+
+  def password_required?
+    password_digest.blank? || !password.nil?
+  end
+
+  def password_presence_if_confirmation_provided
+    if password.blank? && password_confirmation.present? # rubocop:disable Style/GuardClause
+      errors.add(:password, :password_blank)
+    end
   end
 end

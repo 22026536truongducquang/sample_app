@@ -14,18 +14,22 @@ User.create!(
   age: 25,
   phone: "0123456789",
   date_of_birth: Date.new(2000, 1, 1),
-  gender: "male"
+  gender: "male",
+  admin: true
 )
 
-10.times do |n|
+99.times do |n|
+  name = Faker::Name.name
+  email = "example-#{n+1}@railstutorial.org"
+  password = "password"
+  gender = ["male", "female", "other"].sample
+  date_of_birth = Faker::Date.birthday(min_age: 18, max_age: 65)
   User.create!(
-    name: "User #{n + 1}",
-    email: "user#{n + 1}@example.com",
-    password: "password",
-    password_confirmation: "password",
-    age: 20 + n,
-    phone: "09876543#{n}",
-    date_of_birth: Date.new(2000, (n % 12) + 1, (n % 28) + 1),
-    gender: n.even? ? "male" : "female"
+    name: name,
+    email: email,
+    password: password,
+    password_confirmation: password,
+    gender: gender,
+    date_of_birth: date_of_birth
   )
 end
