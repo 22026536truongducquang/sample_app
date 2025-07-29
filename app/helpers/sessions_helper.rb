@@ -31,11 +31,29 @@ module SessionsHelper
     @current_user ||= find_user_from_session || find_user_from_cookies
   end
 
+  def current_user? user
+    user == current_user
+  end
+
   def remember user
     user.remember
     cookies.permanent.signed[:user_id] = user.id
     cookies.permanent[:remember_token] = user.remember_token
     session[:session_token] = user.remember_token
+  end
+
+  def remember_session user
+    user.remember
+    session[:session_token] = user.remember_token
+  end
+
+  def redirect_back_or(default, **options)
+    redirect_to(session[:forwarding_url] || default, **options)
+    session.delete(:forwarding_url)
+  end
+
+  def store_location
+    session[:forwarding_url] = request.original_url if request.get?
   end
 
   private
@@ -48,7 +66,7 @@ module SessionsHelper
     return unless user
 
     session_token = session[:session_token]
-    user if session_token && user.authenticated?(session_token)
+    user if user.authenticated?(session_token)
   end
 
   def find_user_from_cookies

@@ -7,7 +7,27 @@ en:
       updated_at: "Updated At"
     new:
       title: "Sign Up"
-      confirmation: "Password Confirmation"
-      create_account: "Create Account"
+      submit: "Submit"
+      create_account: "Create account"
     create: 
       success: "User was successfully created."
+    edit:
+      title: "Update your profile"
+      submit: "Submit"
+      not_found: "User not found"
+      change: "Change"
+    form:
+      confirmation: "Password Confirmation"
+    update:
+      success: "Update successfully"
+    index:
+      title: "All users"
+    destroy:
+      success: "Deleted user"
+      fail: "Delete fail"
+    user:
+      delete: "Delete"
+      are_you_sure?: "Are you sure to delete this user ?"
+    not_admin: "You are not authorized to perform this action."
+    please_login: "Please log in to access this page."
+    not_correct_user: "You are not authorized to view this profile."

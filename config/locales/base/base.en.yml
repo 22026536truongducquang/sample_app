@@ -23,7 +23,7 @@ en:
     profile: "Profile"
     settings: "Settings"
     logout: "Logout"
-  
+    users: "Users"
   time:
     formats:
       default: "%d/%m/%Y %H:%M"
