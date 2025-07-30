@@ -17,12 +17,9 @@ items: Settings.pagy.items)
   def create
     @user = User.new user_params
     if @user.save
-      reset_session
-      log_in @user
-      remember @user
-      flash[:success] = t(".success")
-      redirect_to @user, status: :see_other
+      send_activation_email
     else
+      flash.now[:danger] = t(".error")
       render :new, status: :unprocessable_entity
     end
   end
@@ -82,9 +79,15 @@ items: Settings.pagy.items)
   end
 
   def admin_user
-    return if current_user&.admin?
+    redirect_to root_path unless current_user&.admin?
+  end
 
-    flash[:danger] = t(".not_admin")
+  def send_activation_email
+    @user.send_activation_email
+    flash[:info] = t(".check_email")
+    redirect_to root_path, status: :see_other
+  rescue StandardError
+    flash[:danger] = t(".email_error")
     redirect_to root_path, status: :see_other
   end
 end

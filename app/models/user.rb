@@ -15,9 +15,10 @@ gender).freeze
   EMAIL_MAX_LENGTH = 255
   MAX_YEARS_AGO = 100
 
-  attr_accessor :remember_token
+  attr_accessor :remember_token, :activation_token
 
   before_save :downcase_email
+  before_create :create_activation_digest
 
   scope :recent, -> {order(created_at: :desc)}
 
@@ -54,10 +55,19 @@ gender).freeze
     update_column :remember_digest, nil
   end
 
-  def authenticated? token
-    return false if remember_digest.blank?
+  def authenticated? attribute, token
+    digest = send "#{attribute}_digest"
+    return false unless digest
 
-    BCrypt::Password.new(remember_digest).is_password?(token)
+    BCrypt::Password.new(digest).is_password? token
+  end
+
+  def activate
+    update_columns(activated: true, activated_at: Time.zone.now)
+  end
+
+  def send_activation_email
+    UserMailer.account_activation(self).deliver_now
   end
 
   class << self
@@ -89,5 +99,10 @@ gender).freeze
     if password.blank? && password_confirmation.present? # rubocop:disable Style/GuardClause
       errors.add(:password, :password_blank)
     end
+  end
+
+  def create_activation_digest
+    self.activation_token = User.new_token
+    self.activation_digest = User.digest(activation_token)
   end
 end

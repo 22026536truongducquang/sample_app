@@ -15,7 +15,9 @@ User.create!(
   phone: "0123456789",
   date_of_birth: Date.new(2000, 1, 1),
   gender: "male",
-  admin: true
+  admin: true,
+  activated: true, 
+  activated_at: Time.zone.now
 )
 
 99.times do |n|
@@ -30,6 +32,8 @@ User.create!(
     password: password,
     password_confirmation: password,
     gender: gender,
-    date_of_birth: date_of_birth
+    date_of_birth: date_of_birth,
+    activated: true, 
+    activated_at: Time.zone.now
   )
 end
