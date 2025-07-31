@@ -5,6 +5,9 @@ vi:
       title: "Thông tin người dùng"
       created_at: "Ngày tạo"
       updated_at: "Cập nhật lúc"
+      microposts:  
+        one: "1 bài viết"
+        other: "%{count} bài viết"
     new:
       title: "Đăng ký tài khoản"
       submit: "Xác nhận"

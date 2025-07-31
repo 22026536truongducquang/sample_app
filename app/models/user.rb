@@ -22,6 +22,8 @@ gender).freeze
   before_save :downcase_email
   before_create :create_activation_digest
 
+  has_many :microposts, dependent: :destroy
+
   scope :recent, -> {order(created_at: :desc)}
 
   validates :name, presence: true, length: {maximum: NAME_MAX_LENGTH}
@@ -37,6 +39,10 @@ gender).freeze
                      allow_nil: true,
                      if: :password_required?
   validate :password_presence_if_confirmation_provided
+
+  def feed
+    microposts
+  end
 
   def date_of_birth_must_be_within_last_100_years
     return if date_of_birth.blank?

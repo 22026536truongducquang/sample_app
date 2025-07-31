@@ -5,6 +5,9 @@ en:
       title: "User Information"
       created_at: "Created At"
       updated_at: "Updated At"
+      microposts:  
+        one: "1 micropost"
+        other: "%{count} microposts"
     new:
       title: "Sign Up"
       submit: "Submit"

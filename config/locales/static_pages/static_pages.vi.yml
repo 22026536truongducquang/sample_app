@@ -19,3 +19,4 @@ vi:
         %{link},
         một ứng dụng mẫu.
       link: "Hướng dẫn Ruby on Rails"
+      micropost_feed:  "Bảng tin"

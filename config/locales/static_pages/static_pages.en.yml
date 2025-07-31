@@ -20,3 +20,4 @@ en:
         %{link}
         sample application.
       link: "Ruby on Rails Tutorial"
+      micropost_feed:  "Micropost Feed"
