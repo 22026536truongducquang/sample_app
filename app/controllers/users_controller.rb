@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   before_action :admin_user, only: :destroy
   def index
     @pagy, @users = pagy(User.recent, page: params[:page],
-items: Settings.pagy.items)
+items: Settings.pagy.page_10)
   end
 
   # GET /signup
@@ -25,7 +25,10 @@ items: Settings.pagy.items)
   end
 
   # GET /users/:id
-  def show; end
+  def show
+    @page, @microposts = pagy @user.microposts.newest,
+                              items: Settings.pagy.page_10
+  end
 
   # GET /users/:id/edit
   def edit; end

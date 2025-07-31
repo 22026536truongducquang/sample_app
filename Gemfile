@@ -3,6 +3,12 @@ git_source(:github) {|repo| "https://github.com/#{repo}.git"}
 
 ruby "3.2.2"
 
+gem "i18n-js", "3.9.2"
+
+gem "image_processing", "1.12.2"
+
+gem "active_storage_validations", "0.9.8"
+
 gem "faker", "2.21.0"
 
 gem "pagy"
@@ -83,3 +89,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "ruby-lsp", "~> 0.26.1"

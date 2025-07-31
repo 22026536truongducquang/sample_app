@@ -44,3 +44,7 @@ vi:
               invalid: "không phải là ngày hợp lệ"
               in_future: "không được ở tương lai"
               past_max_year: "không được cách hiện tại quá 100 năm"
+        micropost:
+          attributes:
+            image:
+              image_too_large: "Kích thước tệp tối đa là 5MB. Vui lòng chọn tệp nhỏ hơn."

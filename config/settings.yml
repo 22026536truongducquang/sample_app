@@ -7,8 +7,10 @@ links:
   rails_book: "http://www.railstutorial.org/book"
 digits:
   digit_6: 6
+  digit_50: 50
+  digit_140: 140
 pagy:
-  items: 10
+  page_10: 10
 email:
   from_address: "noreply@example.com"
 user_mailer:
@@ -17,5 +19,11 @@ user_mailer:
 
 mailer:
   expire_hour: 2
+  items: 10
 sizes:
   size_80: 80
+uploads:
+    image_types:
+      - image/jpeg
+      - image/gif
+      - image/png

@@ -8,6 +8,11 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <script src="https://cdn.jsdelivr.net/npm/i18n-js@3.8.0/dist/i18n.min.js"></script>
+    <%= javascript_include_tag "i18n/translations" %>
+    <script>
+      I18n.locale = "<%= I18n.locale %>";
+    </script>
   </head>
 
   <body>

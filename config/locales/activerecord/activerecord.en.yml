@@ -43,3 +43,7 @@ en:
               invalid: "is not a valid date"
               in_future: "can't be in the future"
               past_max_year: "can't be more than 100 years ago"
+        micropost:
+          attributes:
+            image:
+              image_too_large: "Maximum file size is 5MB. Please choose a smaller file."
