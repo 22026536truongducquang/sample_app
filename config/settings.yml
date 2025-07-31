@@ -14,5 +14,8 @@ email:
 user_mailer:
   host: localhost:3000
   protocol: http
+
+mailer:
+  expire_hour: 2
 sizes:
   size_80: 80
