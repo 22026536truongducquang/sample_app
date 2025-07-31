@@ -22,6 +22,9 @@ mailer:
   items: 10
 sizes:
   size_80: 80
+  size_36: 36
+
+allowed_image_types: "image/jpeg,image/gif,image/png"
 uploads:
     image_types:
       - image/jpeg

@@ -32,7 +32,16 @@ en:
     user:
       delete: "Delete"
       are_you_sure?: "Are you sure to delete this user ?"
+    show_follow:
+      microposts: "Microposts: "
+      view_my_profile: "View my profile"
+    following:
+      title: "Following"
+    followers:
+      title: "Followers"
     not_found: "User not found"
     not_admin: "You are not authorized to perform this action."
     check_email: "Please check your email for the activation link."
     email_error: "There was an error sending the activation email. Please try again later."
+    follow: "Follow"
+    unfollow: "Unfollow"

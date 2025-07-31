@@ -1,0 +1,21 @@
+.stats {
+  margin-top: 0;
+  overflow: auto;
+  padding: 0;
+
+  a {
+    border-left: 1px solid #777;
+    color: gray;
+    float: left;
+    padding: 0 10px;
+
+    &:hover {
+      color: blue;
+      text-decoration: none;
+    }
+  }
+
+  strong {
+    display: block;
+  }
+}
