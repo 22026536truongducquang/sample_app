@@ -32,6 +32,13 @@ vi:
     user:
       delete: "Xóa"
       are_you_sure?: "Bạn chắc chắn muốn xóa người dùng này ?"
+    show_follow:
+      microposts: "Bài viết: "
+      view_my_profile: "Xem hồ sơ của tôi"
+    following:
+      title: "Đang theo dõi"
+    followers:
+      title: "Người theo dõi"
     not_found: "Không tìm thấy người dùng"
     not_admin: "Bạn không được phép thực hiện hành động này."
     please_login: "Vui lòng đăng nhập để truy cập trang này."
@@ -40,3 +47,5 @@ vi:
     email_error: "Đã xảy ra lỗi khi gửi email kích hoạt. Vui lòng thử lại sau."
     check_email: "Vui lòng kiểm tra email của bạn để nhận liên kết kích hoạt."
     email_error: "Đã xảy ra lỗi khi gửi email kích hoạt. Vui lòng thử lại sau."
+    follow: "Theo dõi"
+    unfollow: "Bỏ theo dõi"

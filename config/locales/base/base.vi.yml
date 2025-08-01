@@ -39,6 +39,10 @@ vi:
     formats:
       default: "%d/%m/%Y %H:%M"
 
+  stats:
+    following: "Đang theo dõi"
+    followers: "Người theo dõi"
+
   datetime:
     distance_in_words:
       half_a_minute: "khoảng nửa phút"

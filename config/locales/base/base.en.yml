@@ -37,6 +37,9 @@ en:
   time:
     formats:
       default: "%d/%m/%Y %H:%M"
+  stats:
+    following: "Following"
+    followers: "Followers"
   datetime:
     distance_in_words:
       half_a_minute: "half a minute"
